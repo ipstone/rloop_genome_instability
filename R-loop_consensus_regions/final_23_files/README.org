@@ -1,0 +1,2 @@
+These bed files with R-loop region scores are quite large (~200M - 6GB). We can
+provide these calculation results (intermediate results) per request. 

@@ -1,0 +1,13 @@
+#!/bin/bash
+#BSUB -J score
+#BSUB -n 1
+#BSUB -R rusage[mem=10]
+#BSUB -W 5:00
+#BSUB -L /bin/bash
+#BSUB -o out.txt
+#BSUB -e error.txt
+
+
+
+./Run_calculate_mean_intensity_score.sh 
+

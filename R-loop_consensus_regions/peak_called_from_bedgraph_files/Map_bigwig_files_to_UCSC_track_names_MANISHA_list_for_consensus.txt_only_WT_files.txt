@@ -1,0 +1,56 @@
+Others_DRIP	DRIP	WT	Abakir 2020	hPSC	No	hPSC DRIP WT PRJNA474076 rep1 Signal Abakir 2020	hPSC_DRIP_WT_PRJNA474076_rep1.bw	hPSC_DRIP_WT_PRJNA474076_rep1.bw_converted_to_bed.bed
+Others_DRIP	DRIP	WT	Abakir 2020	hPSC	No	hPSC DRIP WT PRJNA474076 rep2 Signal Abakir 2020	hPSC_DRIP_WT_PRJNA474076_rep2.bw	hPSC_DRIP_WT_PRJNA474076_rep2.bw_converted_to_bed.bed
+DRIP	DRIP	WT	Chedin 2021	HeLa	No	HeLa DRIP WT LS2A rep1 Signal Chedin 2021	HeLa_DRIP_WT_LS2A_rep1.bw	HeLa_DRIP_WT_LS2A_rep1.bw_converted_to_bed.bed
+DRIP	DRIP	WT	Chedin 2021	HeLa	No	HeLa DRIP WT LS2B rep2 Signal Chedin 2021	HeLa_DRIP_WT_LS2B_rep2.bw	HeLa_DRIP_WT_LS2B_rep2.bw_converted_to_bed.bed
+DRIP	DRIP	WT	Chedin 2021	K562	No	K562 DRIP WT LS42C Signal Chedin 2021	K562_DRIP_WT_LS42C.bw	K562_DRIP_WT_LS42C.bw_converted_to_bed.bed
+Others_DRIP	DRIP	WT	Cohen 2018	U2OS	No	U2OS DRIP mOHT EMTAB6318 Signal Cohen 2018	U2OS_DRIP_WT_EMTAB6318.bw	U2OS_DRIP_WT_EMTAB6318.bw_converted_to_bed.bed
+Others_DRIP	DRIP	WT	De Magis 2019	U2OS	No	U2OS DRIP WT GSE115957 rep1 Signal De Magis 2019	U2OS_DRIP_WT_GSE115957_rep1.bw	U2OS_DRIP_WT_GSE115957_rep1.bw_converted_to_bed.bed
+Others_DRIP	DRIP	WT	De Magis 2019	U2OS	No	U2OS DRIP WT GSE115957 rep2 Signal De Magis 2019	U2OS_DRIP_WT_GSE115957_rep2.bw	U2OS_DRIP_WT_GSE115957_rep2.bw_converted_to_bed.bed
+Others_DRIP	DRIP	WT	Gorthi 2018	CHLA10	No	CHLA10 DRIP WT GSE68847 Signal Gorthi 2018	CHLA10_DRIP_WT_GSE68847.bw	CHLA10_DRIP_WT_GSE68847.bw_converted_to_bed.bed
+Others_DRIP	DRIP	WT	Gorthi 2018	TC32	No	TC32 DRIP WT GSE68847 Signal Gorthi 2018	TC32_DRIP_WT_GSE68847.bw	TC32_DRIP_WT_GSE68847.bw_converted_to_bed.bed
+Others_DRIP	DRIP	WT	Hamperl 2017	HeLa	No	HeLa DRIP WT GSE93368 rep1 Signal Hamperl 2017	HeLa_DRIP_WT_GSE93368_rep1.bw	HeLa_DRIP_WT_GSE93368_rep1.bw_converted_to_bed.bed
+Others_DRIP	DRIP	WT	Hamperl 2017	HeLa	No	HeLa DRIP WT GSE93368 rep2 Signal Hamperl 2017	HeLa_DRIP_WT_GSE93368_rep2.bw	HeLa_DRIP_WT_GSE93368_rep2.bw_converted_to_bed.bed
+Others_DRIP	DRIP	WT	Perez-Calero 2020	K562	No	K562 DRIP WT GSE127979 Signal Perez-Calero 2020	K562_DRIP_WT_GSE127979.bw	K562_DRIP_WT_GSE127979.bw_converted_to_bed.bed
+Others_DRIP	DRIP	WT	Promonet 2020	HeLa	No	HeLa DRIP WT PPasero0520 rep1 Signal Promonet 2020	HeLa_DRIP_WT_Pasero0520_rep1.bw	HeLa_DRIP_WT_Pasero0520_rep1.bw_converted_to_bed.bed
+Others_DRIP	DRIP	WT	Promonet 2020	HeLa	No	HeLa DRIP WT PPasero0520 rep2 Signal Promonet 2020	HeLa_DRIP_WT_Pasero0520_rep2.bw	HeLa_DRIP_WT_Pasero0520_rep2.bw_converted_to_bed.bed
+DRIP	DRIP	WT	Sanz 2016	NT2	No	NT2 DRIP WT LS15A rep1 Signal Sanz 2016	NT2_DRIP_WT_LS15A_rep1.bw	NT2_DRIP_WT_LS15A_rep1.bw_converted_to_bed.bed
+DRIP	DRIP	WT	Sanz 2016	NT2	No	NT2 DRIP WT LS15B rep2 Signal Sanz 2016	NT2_DRIP_WT_LS15B_rep2.bw	NT2_DRIP_WT_LS15B_rep2.bw_converted_to_bed.bed
+Others_DRIP	DRIP	WT	Wang 2018	BC	No	BC DRIP WT GSE117671 Signal Wang 2018	BC_DRIP_WT_GSE117671.bw	BC_DRIP_WT_GSE117671.bw_converted_to_bed.bed
+Others_DRIP	DRIP	WT	Wu 2020	U2OS	No	U2OS DRIP WT GSE129907 Signal Wu 2020	U2OS_DRIP_WT_GSE129907.bw	U2OS_DRIP_WT_GSE129907.bw_converted_to_bed.bed
+Others_DRIP	DRIP	WT	Zhang 2020	Hek293	No	HEK293 DRIP WT GSM4474217 Signal Zhang 2020	GSM4474217_NC.bw	GSM4474217_NC.bw_converted_to_bed.bed
+FChedin_DRIPc_A	DRIPc	WT	Chedin 2021	K562	+	K562 DRIPc WT LS42B Signal + Chedin 2021	K562_DRIPc_WT_LS42B_pos.bw	K562_DRIPc_WT_LS42B_pos.bw_converted_to_bed.bed
+FChedin_DRIPc_A	DRIPc	WT	Chedin 2021	K562	-	K562 DRIPc WT LS42B Signal - Chedin 2021	K562_DRIPc_WT_LS42B_neg.bw	K562_DRIPc_WT_LS42B_neg.bw_converted_to_bed.bed
+FChedin_DRIPc_B	DRIPc	WT	Chedin 2021	HeLa	+	HeLa DRIPc WT LS61A rep1 Signal + Chedin 2021	HeLa_DRIPc_WT_LS61A_rep1_pos.bw	HeLa_DRIPc_WT_LS61A_rep1_pos.bw_converted_to_bed.bed
+FChedin_DRIPc_B	DRIPc	WT	Chedin 2021	HeLa	-	HeLa DRIPc WT LS61A rep1 Signal - Chedin 2021	HeLa_DRIPc_WT_LS61A_rep1_neg.bw	HeLa_DRIPc_WT_LS61A_rep1_neg.bw_converted_to_bed.bed
+FChedin_DRIPc_B	DRIPc	WT	Chedin 2021	HeLa	+	HeLa DRIPc WT LS61C rep2 Signal + Chedin 2021	HeLa_DRIPc_WT_LS61C_rep2_pos.bw	HeLa_DRIPc_WT_LS61C_rep2_pos.bw_converted_to_bed.bed
+FChedin_DRIPc_B	DRIPc	WT	Chedin 2021	HeLa	-	HeLa DRIPc WT LS61C rep2 Signal - Chedin 2021	HeLa_DRIPc_WT_LS61C_rep2_neg.bw	HeLa_DRIPc_WT_LS61C_rep2_neg.bw_converted_to_bed.bed
+FChedin_DRIPc_B	DRIPc	WT	Chedin 2021	HeLa	+	HeLa DRIPc WT LS61H rep3 Signal + Chedin 2021	HeLa_DRIPc_WT_LS61H_rep3_pos.bw	HeLa_DRIPc_WT_LS61H_rep3_pos.bw_converted_to_bed.bed
+FChedin_DRIPc_B	DRIPc	WT	Chedin 2021	HeLa	-	HeLa DRIPc WT LS61H rep3 Signal - Chedin 2021	HeLa_DRIPc_WT_LS61H_rep3_neg.bw	HeLa_DRIPc_WT_LS61H_rep3_neg.bw_converted_to_bed.bed
+FChedin_DRIPc_B	DRIPc	WT	Chedin 2021	K562	+	K562 DRIPc WT LS60A rep1 Signal + Chedin 2021	K562_DRIPc_WT_LS60A_rep1_pos.bw	K562_DRIPc_WT_LS60A_rep1_pos.bw_converted_to_bed.bed
+FChedin_DRIPc_B	DRIPc	WT	Chedin 2021	K562	-	K562 DRIPc WT LS60A rep1 Signal - Chedin 2021	K562_DRIPc_WT_LS60A_rep1_neg.bw	K562_DRIPc_WT_LS60A_rep1_neg.bw_converted_to_bed.bed
+FChedin_DRIPc_B	DRIPc	WT	Chedin 2021	K562	+	K562 DRIPc WT LS60B rep2 Signal + Chedin 2021	K562_DRIPc_WT_LS60B_rep2_pos.bw	K562_DRIPc_WT_LS60B_rep2_pos.bw_converted_to_bed.bed
+FChedin_DRIPc_B	DRIPc	WT	Chedin 2021	K562	-	K562 DRIPc WT LS60B rep2 Signal - Chedin 2021	K562_DRIPc_WT_LS60B_rep2_neg.bw	K562_DRIPc_WT_LS60B_rep2_neg.bw_converted_to_bed.bed
+AAguilera_DRIPc	DRIPc	WT	Perez-Calero 2020	K562	+	K562 DRIPc WT GSE127979 rep1 Signal + Perez-Calero 2020	K562_DRIPc_WT_GSE127979_rep1_pos.bw	K562_DRIPc_WT_GSE127979_rep1_pos.bw_converted_to_bed.bed
+AAguilera_DRIPc	DRIPc	WT	Perez-Calero 2020	K562	-	K562 DRIPc WT GSE127979 rep1 Signal - Perez-Calero 2020	K562_DRIPc_WT_GSE127979_rep1_neg.bw	K562_DRIPc_WT_GSE127979_rep1_neg.bw_converted_to_bed.bed
+AAguilera_DRIPc	DRIPc	WT	Perez-Calero 2020	K562	+	K562 DRIPc WT GSE127979 rep2 Signal + Perez-Calero 2020	K562_DRIPc_WT_GSE127979_rep2_pos.bw	K562_DRIPc_WT_GSE127979_rep2_pos.bw_converted_to_bed.bed
+AAguilera_DRIPc	DRIPc	WT	Perez-Calero 2020	K562	-	K562 DRIPc WT GSE127979 rep2 Signal - Perez-Calero 2020	K562_DRIPc_WT_GSE127979_rep2_neg.bw	K562_DRIPc_WT_GSE127979_rep2_neg.bw_converted_to_bed.bed
+FChedin_DRIPc_A	DRIPc	WT	Sanz 2016	NT2	+	NT2 DRIPc WT SX011C rep1 Signal + Sanz 2016	NT2_DRIPc_WT_SX011C_rep1_pos.bw	NT2_DRIPc_WT_SX011C_rep1_pos.bw_converted_to_bed.bed
+FChedin_DRIPc_A	DRIPc	WT	Sanz 2016	NT2	-	NT2 DRIPc WT SX011C rep1 Signal - Sanz 2016	NT2_DRIPc_WT_SX011C_rep1_neg.bw	NT2_DRIPc_WT_SX011C_rep1_neg.bw_converted_to_bed.bed
+FChedin_DRIPc_A	DRIPc	WT	Sanz 2016	NT2	+	NT2 DRIPc WT SX011D rep2 Signal + Sanz 2016	NT2_DRIPc_WT_SX011D_rep2_pos.bw	NT2_DRIPc_WT_SX011D_rep2_pos.bw_converted_to_bed.bed
+FChedin_DRIPc_A	DRIPc	WT	Sanz 2016	NT2	-	NT2 DRIPc WT SX011D rep2 Signal - Sanz 2016	NT2_DRIPc_WT_SX011D_rep2_neg.bw	NT2_DRIPc_WT_SX011D_rep2_neg.bw_converted_to_bed.bed
+KCimprich_qDRIP	qDRIP	WT	Crossley 2020	HeLa	+	HeLa qDRIP WT rep1 Signal + Crossley 2020	HeLa_qDRIP_WT_rep1_pos.bw	HeLa_qDRIP_WT_rep1_pos.bw_converted_to_bed.bed
+KCimprich_qDRIP	qDRIP	WT	Crossley 2020	HeLa	-	HeLa qDRIP WT rep1 Signal - Crossley 2020	HeLa_qDRIP_WT_rep1_neg.bw	HeLa_qDRIP_WT_rep1_neg.bw_converted_to_bed.bed
+KCimprich_qDRIP	qDRIP	WT	Crossley 2020	HeLa	+	HeLa qDRIP WT rep2 Signal + Crossley 2020	HeLa_qDRIP_WT_rep2_pos.bw	HeLa_qDRIP_WT_rep2_pos.bw_converted_to_bed.bed
+KCimprich_qDRIP	qDRIP	WT	Crossley 2020	HeLa	-	HeLa qDRIP WT rep2 Signal - Crossley 2020	HeLa_qDRIP_WT_rep2_neg.bw	HeLa_qDRIP_WT_rep2_neg.bw_converted_to_bed.bed
+KCimprich_qDRIP	qDRIP	WT	Crossley 2020	HeLa	+	HeLa qDRIP WT rep3 Signal + Crossley 2020	HeLa_qDRIP_WT_rep3_pos.bw	HeLa_qDRIP_WT_rep3_pos.bw_converted_to_bed.bed
+KCimprich_qDRIP	qDRIP	WT	Crossley 2020	HeLa	-	HeLa qDRIP WT rep3 Signal - Crossley 2020	HeLa_qDRIP_WT_rep3_neg.bw	HeLa_qDRIP_WT_rep3_neg.bw_converted_to_bed.bed
+KCimprich_qDRIP	qDRIP	WT	Crossley 2020	HeLa	+	HeLa qDRIP WT rep4 Signal + Crossley 2020	HeLa_qDRIP_WT_rep4_pos.bw	HeLa_qDRIP_WT_rep4_pos.bw_converted_to_bed.bed
+KCimprich_qDRIP	qDRIP	WT	Crossley 2020	HeLa	-	HeLa qDRIP WT rep4 Signal - Crossley 2020	HeLa_qDRIP_WT_rep4_neg.bw	HeLa_qDRIP_WT_rep4_neg.bw_converted_to_bed.bed
+JGreallys_RDIP	RDIP	WT	Nadel 2015	Hek293	+	HEK293 RDIP WT GSE68953 Signal + Nadel 2015	HEK293_RDIP_WT_GSE68953_pos.bw	HEK293_RDIP_WT_GSE68953_pos.bw_converted_to_bed.bed
+JGreallys_RDIP	RDIP	WT	Nadel 2015	Hek293	-	HEK293 RDIP WT GSE68953 Signal - Nadel 2015	HEK293_RDIP_WT_GSE68953_neg.bw	HEK293_RDIP_WT_GSE68953_neg.bw_converted_to_bed.bed
+JGreallys_RDIP	RDIP	WT	Nadel 2015	IMR90	+	IMR90 RDIP WT GSE68953 Signal + Nadel 2015	IMR90_RDIP_WT_GSE68953_pos.bw	IMR90_RDIP_WT_GSE68953_pos.bw_converted_to_bed.bed
+JGreallys_RDIP	RDIP	WT	Nadel 2015	IMR90	-	IMR90 RDIP WT GSE68953 Signal - Nadel 2015	IMR90_RDIP_WT_GSE68953_neg.bw	IMR90_RDIP_WT_GSE68953_neg.bw_converted_to_bed.bed
+NProudfoots_RDIP	RDIP	WT	Nojima 2018	HeLa	+	HeLa RDIP WT GSE120371 rep1 Signal + Nojima 2018	HeLa_RDIP_WT_GSE120371_rep1_pos.bw	HeLa_RDIP_WT_GSE120371_rep1_pos.bw_converted_to_bed.bed
+NProudfoots_RDIP	RDIP	WT	Nojima 2018	HeLa	-	HeLa RDIP WT GSE120371 rep1 Signal - Nojima 2018	HeLa_RDIP_WT_GSE120371_rep1_neg.bw	HeLa_RDIP_WT_GSE120371_rep1_neg.bw_converted_to_bed.bed
+NProudfoots_RDIP	RDIP	WT	Nojima 2018	HeLa	+	HeLa RDIP WT GSE120371 rep2 Signal + Nojima 2018	HeLa_RDIP_WT_GSE120371_rep2_pos.bw	HeLa_RDIP_WT_GSE120371_rep2_pos.bw_converted_to_bed.bed
+NProudfoots_RDIP	RDIP	WT	Nojima 2018	HeLa	-	HeLa RDIP WT GSE120371 rep2 Signal - Nojima 2018	HeLa_RDIP_WT_GSE120371_rep2_neg.bw	HeLa_RDIP_WT_GSE120371_rep2_neg.bw_converted_to_bed.bed

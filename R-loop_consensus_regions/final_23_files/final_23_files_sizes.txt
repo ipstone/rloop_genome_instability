@@ -1,0 +1,25 @@
+total 40289808
+
+ 6045584870 May 21 12:28 HeLa_qDRIP_WT_mean_of_replicates.bed_after_computing_average.bed
+ 5279374858 May 21 12:58 hPSC_DRIP_WT_PRJNA474076_mean_of_replicates.bed_after_computing_average.bed
+ 4737814075 May 21 12:48 U2OS_DRIP_WT_GSE115957_mean_of_replicates.bed_after_computing_average.bed
+ 2545894208 May 21 12:37 NT2_DRIP_WT_LS15A_mean_of_replicates.bed_after_computing_average.bed
+ 2530369804 May 20 10:28 U2OS_DRIP_WT_EMTAB6318.bw_converted_to_bed.bed
+ 2510430121 May 21 12:04 HeLa_DRIP_WT_LS2A_mean_of_replicates.bed_after_computing_average.bed
+ 1922042726 May 21 12:07 HeLa_DRIP_WT_Pasero0520_mean_of_replicates.bed_after_computing_average.bed
+ 1916294744 May 21 12:10 HeLa_DRIPc_WT_LS61ACH_mean_of_replicates.bed_after_computing_average.bed
+ 1888322620 May 21 12:14 HeLa_RDIP_WT_GSE120371_mean_of_replicates.bed_after_computing_average.bed
+ 1465897740 May 21 12:33 K562_DRIPc_WT_LS60AB_mean_of_replicates.bed_after_computing_average.bed
+ 1371820855 May 21 11:59 HeLa_DRIP_WT_GSE93368_mean_of_replicates.bed_after_computing_average.bed
+ 1335316315 May 21 12:30 K562_DRIPc_WT_GSE127979_mean_of_replicates.bed_after_computing_average.bed
+ 1307510802 May 20 10:16 K562_DRIP_WT_LS42C.bw_converted_to_bed.bed
+ 1202634727 May 20 10:30 U2OS_DRIP_WT_GSE129907.bw_converted_to_bed.bed
+  951685090 May 21 12:39 NT2_DRIPc_WT_SX011C_mean_of_replicates.bed_after_computing_average.bed
+  949990059 May 20 10:01 CHLA10_DRIP_WT_GSE68847.bw_converted_to_bed.bed
+  864810523 May 20 13:32 IMR90_RDIP_WT_GSE68953_merged_strands.bed_after_getting_max_across_strands.txt
+  794974423 May 20 10:01 BC_DRIP_WT_GSE117671.bw_converted_to_bed.bed
+  716277432 May 20 10:25 TC32_DRIP_WT_GSE68847.bw_converted_to_bed.bed
+  450944263 May 20 10:16 K562_DRIP_WT_GSE127979.bw_converted_to_bed.bed
+  283635962 May 20 13:22 HEK293_RDIP_WT_GSE68953_merged_strands.bed_after_getting_max_across_strands.txt
+  182190984 May 20 13:34 K562_DRIPc_WT_LS42B_merged_strands.bed_after_getting_max_across_strands.txt
+    2706829 May 20 10:01 GSM4474217_NC.bw_converted_to_bed.bed
