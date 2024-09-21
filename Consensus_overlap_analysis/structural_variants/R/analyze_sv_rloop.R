@@ -569,7 +569,7 @@ main_biallelic <- function() {
 }
 # main_violin_plot_selected_tumors()
 # a <- main()
-# fwrite(a, "/data/projects/peix/rloop_project/output/plot-data_for_Manisha/SV_counts_all-tumors.tsv")
+# fwrite(a, "/data/projects/peix/rloop_project/output/fig_plot_data/SV_counts_all-tumors.tsv")
 
 ## Save the SV breakpoints data of consensus Rloop vs non-Rloop region for analysis with RAD52 comparison
 # fwrite(svdata$consensus_data, "output/rloop-consensus_sv-data_for_RAD52_comparison.tsv")

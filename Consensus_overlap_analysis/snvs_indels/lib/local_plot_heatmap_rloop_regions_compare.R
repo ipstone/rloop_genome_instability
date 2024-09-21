@@ -7,44 +7,99 @@ library(tidyverse)
 library(ipfun)
 library(ggpubr)
 
-# SV results are organized differently with SBS/indel results
-# We have the results saved in the output/sv_test_results folder.
+tumors_list <- c(
+    #"ICGC_Breast", 
+    "ICGC_Pancreatic", 
+    "TCGA_PAAD",
+    "Serena_ER", 
+    "TCGA_ER", 
+    "ICGC_Prostate",
+    "TCGA_PRAD", 
+    "ICGC_OV", 
+    "TCGA_OV", 
+    "ICGC_Liver",
+    "TCGA_Liver",
+    #"Serena-Davies_ER_Biallelic",
+    "TCGA_LUAD", 
+    "TCGA_LUSC" ,
+    "ICGC_Melanoma",
+    "TCGA_SKCM"
+    #"ICGC_CNS-Medullo"
+    #, "Serena-Davies_ER_Biallelic"
+)
 
-collect_all_sv_results <- function() {
-    # Collect all different results in the output/sv_test_results folder,
-    # adding tumor type and region tags
-    # Note: in order to have this function working, I renamed tss_100 to
-    # tss-100, so that the regions are all together when splitted
-    files <- list.files("output/sv_test_results/", pattern = "csv$")
-    tumor <- sapply(strsplit(files, "_", fixed = T), `[`, 1)
-    tags <- sapply(strsplit(files, "_", fixed = T), `[`, 3)
-    regions <- gsub(".csv", "", tags, fixed = T)
+#tumors <- c(
+    #"ICGC_Breast", "ICGC_Liver",
+    #"ICGC_OV", "ICGC_CNS-Medullo",
+    #"ICGC_Pancreatic", "ICGC_Prostate",
+    #"Serena_ER")
 
+# Start with SBS6 plot to simplify things
+expriment_sbs <- function() {
+    # Experimental code plotting starting graphics
+    d <- fread("output/SBS_compare_rloop_regions/ICGC_OV/SBS6_test_results.tsv")
+    d$plot_pval <- ifelse(d$pval < 0.00001, 0.00001, d$pval)
+    p1 <- ggplot(d, aes(x = MutationType, y = region)) +
+        geom_tile(aes(fill = log10(plot_pval)), color = "white") +
+        scale_fill_distiller(palette = "YlGnBu", limits = c(-5, 0)) +
+        theme(axis.text.x = element_text(angle = 90))
 
+    # Some experimental setting for different coloring
+    # scale_fill_gradient2(low="green", high="red", mid="black",
+    # midpoint = -2,
+    # breaks = c(-5, -3, -2, log10(0.05), 0))
+    # scale_fill_brewer()
 
-    collect_tumor <- function(tumor_file) {
+    p2 <- ggplot(d, aes(x = MutationType, y = region, fill = log2(foldChange))) +
+        geom_tile(color = "white") +
+        scale_fill_distiller(palette = "Spectral") +
+        theme(axis.text.x = element_text(angle = 90))
+
+    p <- ggarrange(p1, p2, nrow = 1)
+    ggsave("output/SBS_compare_rloop_regions/ICGC_OV/heatmap_SBS6.png", p)
+}
+
+collect_all_sbs_results <- function(testtype = "SBS6") {
+    # Collect all different tumors SBS test results
+    collect_tumor <- function(tumor) {
         input_file <- paste0(
-            "output/sv_test_results/",
-            tumor_file
+            "SBS_compare_rloop_regions/",
+            tumor, "/", testtype, "_test_results.tsv"
         )
-
         d <- fread(input_file)
-        files <- tumor_file
-        tumor <- sapply(strsplit(files, "_", fixed = T), `[`, 1)
-        tags <- sapply(strsplit(files, "_", fixed = T), `[`, 3)
-        regions <- gsub(".csv", "", tags, fixed = T)
-
         d$tumor_type <- tumor
-        d$region <- regions
-        d$file <- tumor_file
         return(d)
     }
-
-    alld <- rbindlist(lapply(files, collect_tumor))
+    alld <- rbindlist(lapply(tumors_list, collect_tumor))
+    alld$tumor_type = factor(alld$tumor_type, levels = tumors_list)
     return(alld)
 }
-# a = collect_all_sv_results()
+# d = collect_all_sbs_results("SBS18")
+#a = collect_all_sbs_results("SBS6")
+#b = a[ tumor_type=="ICGC_CNS-Medullo"]
+#bs= b[ MutationType=="T>G" & region == "tss_transcribed_exome"]
+#bs= b[ region == "tss_transcribe_exome"]
+#table(b$region)
 
+# table(d$tumor_type)
+
+collect_all_indel_results <- function() {
+    # Collect all different tumors SBS test results
+    collect_tumor <- function(tumor) {
+        input_file <- paste0(
+            "indel_compare_rloop_regions/",
+            tumor, "/indel_test_results.tsv"
+        )
+        d <- fread(input_file)
+        d$tumor_type <- tumor
+        return(d)
+    }
+    alld <- rbindlist(lapply(tumors_list, collect_tumor))
+    alld$tumor_type = factor(alld$tumor_type, levels = tumors_list)
+    return(alld)
+}
+# d = collect_all_indel_results()
+# table(d$tumor_type)
 plot_pval <- function(x) {
     # Return the heatmap plot object for pval with the range
     d <- x
@@ -56,19 +111,17 @@ plot_pval <- function(x) {
     return(p1)
 }
 
-plot_foldChange <- function(x, mask.by.pval = F, fold.change.median = F) {
+plot_foldChange <- function(x, mask.by.pval = F, fold.change.median=F) {
     # Return the heatmap plot object for pval with the range
     # If the fold.change.median is given by T, then return the
     # foldChangeMedian
 
     d <- x
-    if (fold.change.median == T) {
-        d$foldChange <- d$foldChangeMedian
-    }
+    if (fold.change.median==T) { d$foldChange = d$foldChangeMedian }
 
     d$foldChange <- ifelse(d$foldChange <= 0.125, 0.125, d$foldChange)
     d$foldChange <- ifelse(d$foldChange >= 8, 8, d$foldChange)
-    # zCuts <- seq(3, -3, -0.5)
+    #zCuts <- seq(3, -3, -0.5)
 
     # If given mask.by.pval ==T, mask these fold change plot
     if (mask.by.pval == T) {
@@ -91,7 +144,7 @@ plot_foldChange <- function(x, mask.by.pval = F, fold.change.median = F) {
     return(p2)
 }
 
-plot_foldChange_byTumor <- function(x, mask.by.pval = F, fold.change.median = F) {
+plot_foldChange_byTumor <- function(x, mask.by.pval = F, fold.change.median=F) {
     # This version put tumor type on the X axis, then using facet to wrap for
     # different mutation types
     # Return the heatmap plot object for pval with the range
@@ -99,13 +152,11 @@ plot_foldChange_byTumor <- function(x, mask.by.pval = F, fold.change.median = F)
     # foldChangeMedian
 
     d <- x
-    if (fold.change.median == T) {
-        d$foldChange <- d$foldChangeMedian
-    }
+    if (fold.change.median==T) { d$foldChange = d$foldChangeMedian }
 
     d$foldChange <- ifelse(d$foldChange <= 0.125, 0.125, d$foldChange)
-    d$foldChange <- ifelse(d$foldChange >= 8, 8, d$foldChange)
-    # zCuts <- seq(3, -3, -0.5)
+    d$foldChange <- ifelse(d$foldChange >= 8 , 8, d$foldChange)
+    #zCuts <- seq(3, -3, -0.5)
 
     # If given mask.by.pval ==T, mask these fold change plot
     if (mask.by.pval == T) {
@@ -128,12 +179,20 @@ plot_foldChange_byTumor <- function(x, mask.by.pval = F, fold.change.median = F)
     return(p2)
 }
 
-saveplot_alltumors_sv_heatmap <- function(column = 2) {
-    # Save all tumors SV heatmap plots based on the testtype
-    fd <- collect_all_sv_results()
-    folderpath <- "output/heatmap_plots/"
-    mkdirp(folderpath)
-    testtype <- "SV"
+saveplot_alltumors_heatmap <- function(testtype = "SBS6", column = 2) {
+    # Save all tumors heatmap plots based on the testtype
+    if (testtype == "indel") {
+        get_data_fun <- collect_all_indel_results
+        folderpath <- "indel_compare_rloop_regions/"
+        fd <- get_data_fun()
+    } else {
+        get_data_fun <- collect_all_sbs_results
+        folderpath <- "SBS_compare_rloop_regions/"
+        fd <- get_data_fun(testtype)
+    }
+
+    # Filter out the region type to be plotted
+    # fd = fd[ region =="tss" | region == "tts"]
 
     # Specifiy plot file
     pval_file <- paste0(folderpath, "all-tumors_", testtype, "_pval_heatmap.png")
@@ -166,28 +225,23 @@ saveplot_alltumors_sv_heatmap <- function(column = 2) {
     ggsave(both_file, pboth, width = 12, height = 12)
 
     print(fchg_file_median)
-    p.foldchange.median <- plot_foldChange(fd, fold.change.median = T) +
+    p.foldchange.median <- plot_foldChange(fd, fold.change.median=T) +
         facet_wrap(~tumor_type, ncol = column)
     ggsave(fchg_file_median, p.foldchange.median, width = 6, height = 8)
+
 }
 
-saveplot_alltumors_sv_heatmap_byMutationTypes <- function(column = 2) {
+saveplot_alltumors_heatmap_byMutationTypes <- function(testtype = "SBS6", column = 2) {
     # Save all tumors heatmap plots based on the testtype
-
-    fd <- collect_all_sv_results()
-    folderpath <- "output/heatmap_plots/"
-    mkdirp(folderpath)
-    testtype <- "SV"
-
-    select_tumors_list <- c(
-        "pancreatic", "breast", "prostate",
-        "ov", "liver", "melanoma"
-    )
-    fd <- collect_all_sv_results()
-    # fd <- fd[region != "consensus"]
-
-    fd <- fd[tumor_type %in% select_tumors_list]
-    fd$tumor_type <- factor(fd$tumor_type, levels = select_tumors_list)
+    if (testtype == "indel") {
+        get_data_fun <- collect_all_indel_results
+        folderpath <- "indel_compare_rloop_regions/"
+        fd <- get_data_fun()
+    } else {
+        get_data_fun <- collect_all_sbs_results
+        folderpath <- "SBS_compare_rloop_regions/"
+        fd <- get_data_fun(testtype)
+    }
 
     # Filter out the region type to be plotted
     # fd = fd[ region =="tss" | region == "tts"]
@@ -205,60 +259,16 @@ saveplot_alltumors_sv_heatmap_byMutationTypes <- function(column = 2) {
     p.foldchange.2 <- plot_foldChange_byTumor(fd, mask.by.pval = T) +
         facet_wrap(~MutationType, ncol = column)
     ggsave(fchg_file2, p.foldchange.2, width = 6, height = 8)
+
 }
 
-saveplot_selected_tumors_sv_heatmap_byMutationTypes <- function(column = 2) {
-    # Save selected tumors heatmap plots based on the testtype
-    select_tumors_list <- c(
-        "pancreatic", "breast", "prostate",
-        "ov", "liver", "melanoma"
-    )
-    fd <- collect_all_sv_results()
-    fd <- fd[region %in% c("tss-sc200", "tts-sc200", "consensus")]
-    fd <- fd[tumor_type %in% select_tumors_list]
-    fd$tumor_type <- factor(fd$tumor_type, levels = select_tumors_list)
-
-    # Specify and setup plot output folder
-    folderpath <- "output/heatmap_plots/"
-    mkdirp(folderpath)
-    testtype <- "SV"
-
-    # Filter out the region type to be plotted
-    # fd = fd[ region =="tss" | region == "tts"]
-
-    # Specifiy plot file
-    fchg_file <- paste0(folderpath, "selected-tumors_", testtype, "_fold-change_heatmap_byMutationType.png")
-    fchg_file2 <- paste0(folderpath, "selected-tumors_", testtype, "_fold-change_heatmap_byMutationType_significant-only.png")
-
-    print(fchg_file)
-    p2 <- plot_foldChange_byTumor(fd) +
-        facet_wrap(~MutationType, ncol = column)
-    ggsave(fchg_file, p2, width = 6, height = 8)
-
-    print(fchg_file2)
-    p.foldchange.2 <- plot_foldChange_byTumor(fd, mask.by.pval = T) +
-        facet_wrap(~MutationType, ncol = column)
-    ggsave(fchg_file2, p.foldchange.2, width = 6, height = 8)
-}
 main <- function() {
-    # Save the SV summary results heatmaps
-    # saveplot_alltumors_sv_heatmap()
-    saveplot_alltumors_sv_heatmap_byMutationTypes()
-    saveplot_selected_tumors_sv_heatmap_byMutationTypes()
+    #saveplot_alltumors_heatmap("SBS18", column = 2)
+    #saveplot_alltumors_heatmap("SBS6", column=2)
+    #saveplot_alltumors_heatmap("indel", column=2)
+    #saveplot_alltumors_heatmap_byMutationTypes("SBS18", column = 2)
+    #saveplot_alltumors_heatmap_byMutationTypes("SBS6", column =2)
+    saveplot_alltumors_heatmap_byMutationTypes("indel", column =2)
 }
 
-# main()
-
-save_plotdata_sv_for_Manisha <- function() {
-    select_tumors_list <- c(
-        "pancreatic", "breast", "prostate",
-        "ov", "liver", "melanoma"
-    )
-    fd <- collect_all_sv_results()
-    fd <- fd[region %in% c("tss-sc200", "tts-sc200", "consensus")]
-    fd <- fd[tumor_type %in% select_tumors_list]
-    fd$tumor_type <- factor(fd$tumor_type, levels = select_tumors_list)
-    fwrite(fd, "/data/projects/peix/rloop_project/output/fig_plot_data/SV_folder-change_tests_selected-tumors.tsv", sep = "\t")
-    return(fd)
-}
-a <- save_plotdata_sv_for_Manisha()
+main()

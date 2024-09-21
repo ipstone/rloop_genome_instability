@@ -1,0 +1,9 @@
+[submodule "Consensus_overlap_analysis/Consensus_overlap_analysis/snvs_indels/lib/MutationalPatterns"]
+	path = Consensus_overlap_analysis/Consensus_overlap_analysis/snvs_indels/lib/MutationalPatterns
+	url = https://github.com/UMCUGenetics/MutationalPatterns
+[submodule "Consensus_overlap_analysis/snvs_indels/lib/MutationalPatterns"]
+	path = Consensus_overlap_analysis/snvs_indels/lib/MutationalPatterns
+	url = https://github.com/UMCUGenetics/MutationalPatterns
+[submodule "Consensus_overlap_analysis/snvs_indels/lib/SigProfilerMatrixGenerator"]
+	path = Consensus_overlap_analysis/snvs_indels/lib/SigProfilerMatrixGenerator
+	url = https://github.com/AlexandrovLab/SigProfilerMatrixGenerator

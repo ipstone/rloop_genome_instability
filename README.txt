@@ -14,3 +14,7 @@ code acompanying Rloop genome instability paper
         scripts and final output for the consensus regions 
 
 
+* Consensus_overlap_analysis
+│   ├── R-loop_TSS_TES_regions: Interact Rloop regions with TSS/TES site regions.
+│   ├── snvs_indels: Analysis SNVs and Indels mutations frequencies in Rloop regions.
+│   └── structural_variants: Analysis for structural variants breakpoints frequencies in Rloop regions.
