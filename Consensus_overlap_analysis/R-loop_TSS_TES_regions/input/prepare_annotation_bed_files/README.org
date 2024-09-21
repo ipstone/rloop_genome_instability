@@ -1,0 +1,34 @@
+Here are the codes to prepare the annotation (related to gene) region bed files.
+
+
+* gencode.v19.annotation.gtf
+
+  This gencode gtf is downloaded from the official site. As the file is a large file, we only included the header of this file here in this repo.
+
+* Makefile
+
+  This contains code which to extract gene related fields into 
+        gencode-v19-extracted.txt file.
+
+  Fields extracted:
+    gene_type:
+    gene_status:
+    gene_name:
+    transcript_type:
+    transcript_status:
+    transcript_name:
+
+* Output
+
+  In the output/ folder, these are the annotation bed files to be used to
+  intersect with Rloop and control regoins:
+        genebody.bed
+        lincRNA.bed
+        pseudogene.bed
+        transcript_protein-coding_gencode-v19.bed
+        transcript_protein-coding_gencode-v19.tsv
+        tss-1kb-window.bed
+        tss-transcribed-1kb-window.bed
+        tts-1kb-window.bed
+        tts-transcribed-1kb-window.bed
+

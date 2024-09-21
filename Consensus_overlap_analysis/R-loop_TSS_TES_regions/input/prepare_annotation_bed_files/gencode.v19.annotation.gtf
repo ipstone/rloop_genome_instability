@@ -1,0 +1,10 @@
+## -- This is truncated version of the input - which should be downloaded at the official site  
+## -- It is not included due to the file size.
+
+
+##description: evidence-based annotation of the human genome (GRCh37), version 19 (Ensembl 74)
+##provider: GENCODE
+##contact: gencode@sanger.ac.uk
+##format: gtf
+##date: 2013-12-05
+rM	ENSEMBL	exon	15956	16023	.	-	.	gene_id "ENSG00000210196.2"; transcript_id "ENST00000387461.2"; gene_type "Mt_tRNA"; gene_status "KNOWN"; gene_name "MT-TP"; transcript_type "Mt_tRNA"; transcript_status "KNOWN"; transcript_name "MT-TP-201"; exon_number 1; exon_id "ENSE00001544473.2"; level 3; tag "basic";
