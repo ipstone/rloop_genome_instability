@@ -35,7 +35,7 @@
 
 I have mapped the bigwig files to the appropriate track names - this is in the file : 
 
-./peaks_called_from_bedgraph_files/Map_bigwig_files_to_UCSC_track_names_MANISHA_list_for_consensus.txt_only_WT_files.txt
+./peaks_called_from_bedgraph_files/Map_bigwig_files_to_UCSC_track_names_paper_list_for_consensus.txt_only_WT_files.txt
 
 
 * Scripts to submit jobs/processing data in the ./scripts folder:

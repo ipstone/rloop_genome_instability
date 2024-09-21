@@ -249,7 +249,7 @@ main <- function() {
 
 # main()
 
-save_plotdata_sv_for_Manisha <- function() {
+save_plotdata_sv_for_paper <- function() {
     select_tumors_list <- c(
         "pancreatic", "breast", "prostate",
         "ov", "liver", "melanoma"
@@ -261,4 +261,4 @@ save_plotdata_sv_for_Manisha <- function() {
     fwrite(fd, "/data/projects/peix/rloop_project/output/fig_plot_data/SV_folder-change_tests_selected-tumors.tsv", sep = "\t")
     return(fd)
 }
-a <- save_plotdata_sv_for_Manisha()
+a <- save_plotdata_sv_for_paper()
