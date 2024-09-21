@@ -39,8 +39,8 @@ Below is the note for each sub-folder for these analysis:
 
 * lib: R and python code for analysis and visualization
 
-  Additionally, two packages' source code were used for our analysis, which are cloned into this folder:
-        SigProfilerMatrixGenerator
-        MutationalPatterns
+  Additionally, two packages' source code were used for our analysis, which are cloned (set as submodule here) into this folder:
+        SigProfilerMatrixGenerator: Commit # f0dbb9cc1d88a99c
+        MutationalPatterns:         Commit # c596fcb91980c8e2
 
 * output: caluclation output and numbers for the paper.
